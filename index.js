@@ -53,9 +53,7 @@ async function generatePacemakerData() {
       pacemakerModels[Math.floor(Math.random() * pacemakerModels.length)],
     battery_status: `${(Math.random() * 100).toFixed(2)}%`,
     heart_rate: Math.floor(Math.random() * 40) + 60,
-    last_checkup: new Date(
-      Date.now() - Math.random() * 31536000000
-    ).toISOString(),
+    last_checkup: Math.floor(Date.now()/1000),
   };
 
   return paceMakerData;
